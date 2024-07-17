@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body
+{
+background:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),url(reg.webp);
+background-size:cover;
+width:100%;
+height:100%;
+color:white;
+}
+.box{
+
+display:flex;
+margin-bottom:15px;
+}
+
+
+
+.register{
+
+position:absolute;
+top:25%;
+left:37%;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:transparent;
+border:7px ridge white;
+border-radius:5px;
+padding:30px; 
+color:white;
+align-items:center;
+
+}
+
+
+
+h1{
+
+text-align:center;
+color:plum;
+font-size:30px;
+font-weight:bold;
+}
+
+h2{
+
+text-align:center;
+color:plum;
+font-size:30px;
+font-weight:bold;
+margin:98px;
+}
+
+
+.box{
+
+display:flex;
+margin-bottom:15px;
+}
+
+
+
+ input{
+background:white; 
+font-size:20px;
+margin-top:5px;
+border-radius:30px;
+padding:20px;
+color:black;
+padding:10px;
+border:4px solid black;
+}
+
+.log{
+padding:10px;
+background:white;
+border:none;
+border-radius:40px;
+cursor:pointer;
+font-size:20px;
+color:black;
+font-weight:bold;
+text-transform:capitalize;
+}
+ul{
+display:flex;
+position:absolute;
+right:20px;
+top:20px;
+
+}
+
+img{
+
+position:absolute;
+left:30px;
+top:30px;
+width:15%;
+height:30%;
+}
+ul li{
+list-style:none;
+margin-left:62px;
+margin-top:27px;
+}
+
+ul li a{
+font-size:2vw;
+text-decoration:none;
+color:snow;
+text-shadow:2px 2px black;
+}
+
+ul li.active a{
+	background-color:white;
+	color:darkmagenta;
+        padding:6px;
+        border-radius: 6px;
+        text-shadow:none;
+         font-weight:bold;
+}
+
+ul li a:hover
+{
+font-weight:bold;
+color:darkmagenta;
+padding:5px;
+text-shadow:none;
+background-color:white;
+border-top-left-radius: 6px;
+border-bottom-left-radius: 6px;
+border-top-right-radius:6px;
+border-bottom-right-radius:6px;
+}
+        </style></head>
+    <body>
+  <div class="logo"><img src="bliss1.png"></div>
+        <div>
+<ul>
+<li class='active'><a href="index.html">BACK</a></li>	
+</ul>
+</div>
+        <div class="register">
+            <form action='admin' method='get' onsubmit="return field()">
+  
+<h1>ADMIN</h1>
+
+     <input type="text" id="user" name="username" placeholder="Username" onchange="validate()" pattern="[A-Za-z]{5,10}"> 
+     <br>
+<input type="password" id="pwd" name="password" placeholder="Password" >
+
+ <center>       
+     <p id="show"></p>
+<input type="submit"    class="log" value="SIGN IN">
+</center>
+</form>
+</div>
+        <script>
+            function field(){
+var name=document.getElementById('user').value;
+var pwd=document.getElementById('pwd').value;
+    if(name==="" ||  pwd==="" )
+	{
+		 document.getElementById('show').innerHTML="Please fill the form!!";
+		show.style="color:red;";
+               
+                return false;
+	}
+	
+	else{
+            if(name==="mithuna"&& pwd==="admin" )
+	{
+	  
+         return true;
+	}
+        else{
+            document.getElementById('show').innerHTML="your are not a admin!!";
+		show.style="color:red;";
+               
+                return false;
+        }
+        }
+        return true;
+        }
+        function validate(){
+            var name=document.getElementById('user');
+            if(!name.validity.valid)
+            {
+                document.getElementById('show').innerHTML="username must be alphabet with 5-10 character";
+                show.style="color:red";
+              return false;
+            }
+            else{
+                document.getElementById('show').innerHTML="";
+                return true;
+            }
+            return true;
+        
+        }
+        
+            </script>
+    </body>
+</html>

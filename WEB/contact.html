@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head><title>Contact Us</title>
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+body
+{
+background:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),url(con1.jpg);
+background-size:cover;
+}
+h1{
+font-family:papyrus;
+font-size:20px;
+color:yellow;
+font-weight: bold;
+text-shadow:2px 2px black;
+word-spacing:2px;
+}
+img{
+    margin:10px;
+width:15%;
+height:30%;
+float:left;
+}
+.box1 .p{
+font-family: georgia;
+color:khaki;
+font-weight:bold;
+text-transform: uppercase;
+}
+
+.contactinfo{
+float:left;
+margin-top:100px;
+margin-left:5px;
+font-size:20px;
+background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(bg.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+border:4px ridge black;
+padding:30px; 
+font-weight:bold;
+box-shadow: 10px 10px ;
+}
+
+
+.box1 p{
+color:white;
+}
+
+td{
+margin-left:100px;
+background-color:transparent;
+border:4px;
+padding:30px; 
+color:white;
+}
+
+
+td .form{
+background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(bg.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+border:4px ridge white;
+border-radius:5px;
+padding:30px; 
+color:white;
+margin-top: 100px;
+}
+
+.form input{
+width:90%;
+height:90%;
+border:2px solid white;
+background:transparent;
+font-size:20px;
+margin-top:20px;
+border-radius:30px;
+padding:15px;
+color:white;
+}
+
+
+textarea{
+width:90%;
+height:auto;
+border:2px solid white;
+background:transparent;
+font-size:20px;
+margin-top:10px;
+border-radius:30px;
+padding:10px;
+color:white;
+}
+
+
+
+#button{
+width:50%;
+height:30%;
+background-color:khaki;
+font-size:20px;
+margin-top:10px;
+margin-left:70px;
+border-radius:30px;
+padding:6px;
+color:brown;
+font-weight: bold;
+}
+#button:hover{
+    transform: scale(1.2);
+}
+
+ul{
+display:flex;
+position:absolute;
+right:20px;
+top:20px;
+
+}
+
+
+ul li{
+list-style:none;
+margin-left:62px;
+margin-top:27px;
+}
+
+ul li a{
+font-size:2vw;
+text-decoration:none;
+color:snow;
+text-shadow:2px 2px black;
+}
+
+ul li.active a{
+	background-color:white;
+	color:brown;
+        padding:6px;
+        border-radius: 6px;
+        text-shadow:none;
+        font-weight:bold;
+}
+
+ul li a:hover
+{
+font-weight:bold;
+color:brown;
+padding:5px;
+text-shadow:none;
+background-color:white;
+border-top-left-radius: 6px;
+border-bottom-left-radius: 6px;
+border-top-right-radius:6px;
+border-bottom-right-radius:6px;
+}
+
+.box1 img{
+width:20px;
+height:20px;
+}
+@media only screen and(max-width:600px){
+.contentinfo{
+font-size:10px;
+}
+ul{
+}
+ul li{
+}
+ul li a{
+}
+
+.form{
+top:20%;
+}
+}
+
+</style>
+</head>
+<body>
+<div>
+	<ul>	
+		<li><a href="home.html">HOME</a></li>
+		<li><a href="about.html">ABOUT</a></li>
+		<li><a href="eg">MAKE ORDER</a></li>
+		<li class="active"><a href="contact.html">CONTACT</a></li>
+		<li><a href="index.html">LOGOUT</a></li>
+	</ul>
+</div>
+<table>
+<tr><td></td><td></td>
+<td>
+<div class="contactinfo">
+       <div class="box1">
+	     <p class="p"><img src="phno1.png" alt="">Phone</p>
+	     <p>PhoneNo:9361030271<br>LandLine:044-1234567<p>
+       </div><hr>
+	<div class="box1">
+          
+            <p class="p"><img src="email.png" alt="">Email</p>
+	     <p>frosty_bliss@gmail.com</p>
+       </div><hr >
+       <div class="box1">
+	     <p class="p"><img src="instagram.png" alt="">Instagram</p>  
+	     <p>frosty_bliss_.</p>  
+       </div>
+ </div> </td><td></td><td></td>
+<td class="form">
+<div class="form">
+    <form action="feed_ser" method="post" onsubmit="return feed()">
+<center><h1>ENTER  YOUR  FEEDBACK</h1></center><br>
+<!--<input type="text" id="user" name="name" placeholder="FullName"  pattern="[A-Za-z]{5,10}" onchange="validate()"  required >--><br>
+<input type="email" name="email" id="mail" placeholder="Email" onchange="mail()" required><br>
+<textarea name="text" id="feed" placeholder="Type Your Message..." required></textarea><br>
+<p id="show"></p><h3></h3>
+<input type="submit" value="SUBMIT" id="button" >
+
+</form>
+</div>
+</td><td></td>
+</tr></table>
+
+<script>
+
+
+function feed(){
+//var name=document.getElementById('user').value;
+var email=document.getElementById('mail').value;
+var msg=document.getElementById('feed').value;
+if( email===""|| msg==="")
+{
+ document.getElementById('show').innerHTML="FILL OUT THE FIELD!!";
+	show.style="color:white";
+        return false;
+    }
+	else{
+
+  document.getElementById('show').innerHTML="THANK YOU!!";
+	show.style="color:green";
+        return  true;
+} 
+return true;
+    }
+function validate(){
+            var name=document.getElementById('user').value;
+            if(!name.validity.valid)
+            {
+                document.getElementById('show').innerHTML="* username must be alphabet with 5-10 character";
+                show.style="color:white";
+              return false;
+            }
+            else{
+                document.getElementById('show').innerHTML="";
+                return true;
+            }
+            return true;
+        
+ }
+ 
+         function mail(){
+            var email=document.getElementById('mail').value;
+            if(!email.validity.valid)
+            {
+                document.getElementById('show').innerHTML="MAIL MUST CONTAION @";
+                show.style="color:red";
+              return false;
+            }
+            else{
+                document.getElementById('show').innerHTML="";
+                return true;
+            }
+            return true;
+        }
+</script>
+</body>
+</html>

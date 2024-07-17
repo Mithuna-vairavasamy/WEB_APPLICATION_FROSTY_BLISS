@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>buy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url(ice3.png);
+background-size:cover;
+background-position:center;
+width:100%;
+height:60%;
+}
+ul{
+display:flex;
+position:absolute;
+right:20px;
+top:20px;
+
+}
+button a{
+    text-decoration: none;
+}
+
+ul li{
+list-style:none;
+margin-left:62px;
+margin-top:27px;
+}
+
+ul li a{
+font-size:2vw;
+text-decoration:none;
+color:snow;
+text-shadow:2px 2px black;
+}
+
+ul li.active a{
+	background-color:white;
+	color:darkmagenta;
+        padding:6px;
+        border-radius: 6px;
+        text-shadow:none;
+         font-weight:bold;
+}
+
+ul li a:hover
+{
+font-weight:bold;
+color:darkmagenta;
+padding:5px;
+text-shadow:none;
+background-color:white;
+border-top-left-radius: 6px;
+border-bottom-left-radius: 6px;
+border-top-right-radius:6px;
+border-bottom-right-radius:6px;
+}
+
+.text{
+color:white;
+font-size:20px;
+}
+.text input{
+text-align:center;
+color:black;
+background-color:beige;
+font-size:15px;
+padding:3px;
+font-weight:bold;
+}
+.cart{
+margin-top:20px;
+border:3px ridge black;
+background-color:black;
+color:white;
+padding:20px;
+
+text-transform:capitalize;
+width:50%;
+height:10%;
+font-size:20px;
+font-weight:bold;
+}
+.cart input{
+background:white; 
+font-size:20px;
+margin-top:5px;
+border-radius:30px;
+padding:20px;
+color:black;
+padding:10px;
+border:4px solid black;
+}
+h2{
+
+text-align:center;
+color:plum;
+font-size:30px;
+font-weight:bold;
+margin:98px;
+}
+
+
+.box{
+border:1px solid white;
+color:black;
+background-color:bisque;
+padding:5px;
+}
+.image button{
+font-size:17px;
+color:black;
+padding:10px;
+background-color:bisque;
+width:150px;
+margin-top:10px;
+}
+.image button:hover{
+font-size:16px;
+background-color:lightcoral;
+transform:scale(1.1);
+	}
+.heading {
+	text-align:center;
+	padding:20px 30px;
+	color:mistyrose;
+        font-weight: bold;
+	text-transform:uppercase;
+	text-shadow:2px 2px black;
+        margin-top: 140px;
+	font-size:70px;
+}
+.image-container{
+	display:flex;
+	justify-content:center;
+	background-color:transparent;
+	margin-right:30px;
+	padding:20px;
+	flex-wrap:wrap;
+	gap:20px;
+
+}
+
+.image-container .image{
+	padding:10px;
+	background-color:black;
+	border:2px solid white;
+	margin: 1px 1px 1px 1px;
+	width:350px;
+	border-radius:120px;
+}
+.image-container .image img{
+	height:270px;
+	width:100%;
+        margin-top:4px;
+	margin-bottom:10px;
+	border-radius:280px;
+	transition:0.9s ease;
+}
+
+.image-container .image img:hover{
+	
+	transform: scale(0.5);
+}
+.image-container .image p{
+	text-align:center;
+	border:1px solid beige;
+	background-color:beige;
+	color:black;
+	
+	font-size:17px;
+}
+
+button{
+font-size:25px;
+color:black;
+font-weight:bold;
+border-radius: 10px;
+padding:15px;
+	background-color:lightblue;
+	height:50px;
+	width:100px;
+}
+.button{
+font-size:25px;
+color:black;
+font-weight:bold;
+border-radius: 10px;
+padding:15px;
+	background-color:lightblue;
+	height:30px;
+	width:70px;
+}
+
+.cart .button{
+font-size:20px;
+color:black;
+font-weight:bold;
+border-radius: 10px;
+padding:5px;
+	background-color:lightblue;
+	height:40px;
+	width:80px;
+}
+
+select{
+font-size:15px;
+color:black;
+font-family:  cursive;
+font-weight:bold;
+padding:3px;
+background-color:beige;
+	
+}
+a{
+text-decoration:none;
+color:black;
+}
+
+@media screen and(max-width:768px){	
+}
+
+</style>
+</head>
+
+<body>
+    
+    <div>
+	<ul>	
+		<li ><a href="home.html">HOME</a></li>
+		<li><a href="about.html">ABOUT</a></li>
+		<li class="active"><a href="order1.html"  >MAKE ORDER</a></li>
+		<li><a href="contact.html">CONTACT</a></li>
+		<li><a href="index.html">LOGOUT</a></li>
+	</ul>
+</div>
+<h1 class="heading">BUY NOW</h1>
+<div class="image-container">
+<div class="image">	
+<img src="str.png" alt="">
+<form > 
+ <input type='text'  name='p1' id='p1' value="" size='1px' readonly>
+</form>
+<p id="item1">STRAWBERRY</p>	
+<div class="text"><center>	
+<input type="text" size="37px" value="STRAWBERRY" readonly>
+<p id="item">SIZE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOPPINGS</p>
+<p id="item">Extra  Price For TOPPINGS(10)</p>	
+&nbsp;<select name="qty1" id="cars1">
+<option value="" ></option> 
+<option value="small">SMALL-100rs</option>
+  <option value="medium">MEDIUM-120rs</option> 
+<option value="large">LARGE-150rs</option>
+   </select>&nbsp;
+   <select name="toppings1" id="top1">
+   <option value="" ></option> 
+<option value="chocolate">chocolate</option>
+  <option value="caramelsauce">Caramelsauce</option> 
+ <option value="choco chip">choco chip</option>
+   </select></center></div><br> 
+  <center><div class="text">PRICE:&nbsp; <input type="text"  id="price1" size="1px" readonly>&nbsp;&nbsp;
+ QTY:<input type="number"  id="qty1" min=1 max=7 ></div><BR>
+ <button onclick="cart1()">ADD TO CART</button><br>
+<button onclick="can1()">CANCEL</button>
+<h4 id="error1"></h4>
+  </center>
+	</div>
+
+
+<div class="image">
+    <img src="but.png" alt="">
+<form > 
+ <input type='text'  name='p2' id='p2' value="" size='1px' readonly>
+</form>
+	<p id="item2">BUTTER PECAN</p>	
+<div class="text"><center>	
+<p id="item">SIZE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOPPINGS</p>	
+<p id="item">Extra  Price For TOPPINGS(10)</p>	
+&nbsp;<select name="qty2" id="cars2">	
+<option value="" ></option>
+<option value="small">SMALL-100rs</option>
+  <option value="medium">MEDIUM-120rs</option>
+  <option value="large">LARGE-150rs</option>
+   </select>&nbsp;
+   <select name="toppings2"  id="top2"> 
+ <option value="" ></option>
+ <option value="nuts cruch">Nuts cruch</option> 
+<option value="caramelsauce">Caramelsauce</option>
+<option value="chocolate ">chocolate </option>
+   </select></div><br> 
+<center> <div class="text">PRICE:&nbsp; <input type="text" value="" id="price2" size="1px" readonly>&nbsp;&nbsp;
+ QTY:<input type="number"  id="qty2" min=1 max=7 ></div><BR>	
+<button onclick="cart2()">ADD TO CART</button><br>
+<button onclick="can2()">CANCEL</button>
+<h4 id="error2"></h4></center>
+</div>
+
+<div class="image">	
+<img src="cho.png" alt="">
+<form > 
+ <input type='text'  name='p3' id='p3' value="" size='1px' readonly>
+</form>
+<p id="item3">CHOCOCALTE </p>	
+<div class="text"><center>	
+<p id="item">SIZE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOPPINGS</p>	
+<p id="item">Extra  Price For TOPPINGS(10)</p>
+	&nbsp;<select name="qty3" id="cars3">	
+<option value="" ></option>
+  <option value="small">SMALL-100rs</option>  
+<option value="medium">MEDIUM-120rs</option>
+  <option value="large">LARGE-150rs</option>
+   </select>&nbsp;
+   <select name="toppings3" id="top3">
+ <option value="" ></option>  
+<option value="choco chip">choco chip</option>
+ <option value="sprinkles">sprinkles</option>
+  <option value="waffer">waffer</option>
+   </select></div>
+  <center><div class="text"><br>PRICE:&nbsp; <input type="text" value="" id="price3" size="1px" readonly>&nbsp;&nbsp;
+ QTY:<input type="number"  id="qty3" min=1 max=7 ></div><BR>	
+<button onclick="cart3()">ADD TO CART</button><br>
+<button onclick="can3()">CANCEL</button>
+  <h4 id="error3"></h4></center>
+	</div></div>
+	
+
+
+<div class="image-container">
+<div class="image">	
+<img src="coo.png" alt="">
+<form > 
+ <input type='text'  name='p4' id='p4' value="" size='1px' readonly>
+</form>
+	<p id="item4">COOKIES N' CREAM</p>	
+<div class="text"><center>	
+<p id="item">SIZE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOPPINGS</p>	
+<p id="item">Extra  Price For TOPPINGS(10)</p>	
+&nbsp;<select name="qty4" id="cars4">	
+<option value="" ></option>
+<option value="small">SMALL-100rs</option> 
+<option value="medium">MEDIUM-120rs</option>
+ <option value="large">LARGE-150rs</option>
+   </select>&nbsp; 
+<select name="toppings4" id="top4">  
+ <option value="" ></option>
+ <option value="choco chip">choco chip</option> 
+<option value="caramelsauce">Caramel sauce</option>
+  <option value="chocolate ">chocolate </option>
+   </select></div>  
+ <center><div class="text"><br>
+ PRICE:&nbsp; <input type="text" value="" id="price4" size="1px" readonly>&nbsp;&nbsp;
+ QTY:<input type="number"  id="qty4" min=1 max=7 ></div><BR>
+<button onclick="cart4()">ADD TO CART</button><br>
+<button onclick="can4()">CANCEL</button>
+<h4 id="error4"></h4><center>
+	</div>
+
+
+
+<div class="image">
+	<img src="roc.png" alt="">
+<form > 
+ <input type='text'  name='p5' id='p5' value="" size='1px' readonly>
+</form>
+	<p id="item5">ROCKY ROAD</p>	
+<div class="text"><center>	
+<p id="item">SIZE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOPPINGS</p>	
+<p id="item">Extra  Price For TOPPINGS(10)</p>	
+&nbsp;<select name="qty5" id="cars5">
+	<option value="" ></option>
+  <option value="small">SMALL-100rs</option>
+ <option value="medium">MEDIUM-120rs</option>
+  <option value="large">LARGE-150rs</option>
+   </select>&nbsp;
+  <select name="toppings5" id="top5">
+   <option value="" ></option>
+ <option value="nuts cruch">Nuts cruch</option>
+  <option value="caramelsauce">Caramelsauce</option>
+ <option value="White chocolate">White chocolate </option>
+   </select></div>
+  <center><div class="text"><br>PRICE:&nbsp; <input type="text" value="" id="price5" size="1px">&nbsp;&nbsp;
+ QTY:<input type="number"  id="qty5" min=1 max=7 ></div><BR>	
+<button onclick="cart5()">ADD TO CART</button><br>
+<button onclick="can5()">CANCEL</button>
+  <h4 id="error5"></h4></center>
+	</div>
+
+
+
+<div class="image">
+	<img src="pis.png" alt="">	
+ <form > 
+ <input type='text'  name='p6' id='p6' value="" size='1px' readonly>
+</form>       
+ 
+<p id="item6">PISTACHIO</p>
+	<div class="text">
+<p id="item">SIZE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOPPINGS</p>
+<p id="item"><b>Extra  Price For TOPPINGS(10)</b></p>	
+&nbsp;&nbsp;&nbsp;<select name="qty6" id="cars6">	
+<option value="" ></option>
+
+<option value="small">SMALL-100rs</option>
+  <option value="medium">MEDIUM-120rs</option>
+<option value="large">LARGE-150rs</option>
+   </select>&nbsp;   
+<select name="toppings6" id="top6">  
+<option value="" ></option> 
+<option value="nuts cruch">Nuts chrush</option>
+ <option value="caramelsauce">Caramel sauce</option>
+<option value="sprinkles ">sprinkles</option>
+   </select></div>
+  <center><div class="text"><br>
+   PRICE:&nbsp; <input type="text" value="" id="price6" size="1px" readonly>&nbsp;&nbsp;
+ QTY:<input type="number"  id="qty6" min=1 max=7 ></div><BR>	
+<button onclick="cart6()">ADD TO CART</button><br>
+<button onclick="can6()">CANCEL</button>
+  <h4 id="error6"></h4></center>
+	</div>
+
+
+
+<div class="image">
+	<img src="van.jpg" alt="">
+<form > 
+ <input type='text'  name='p7' id='p7' value="" size='1px' readonly>
+</form>
+<p id="item7">VANILLA</p>
+	<div class="text">
+<p id="item">SIZE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOPPINGS</p>
+<p id="item">Extra  Price For TOPPINGS(10)</p>	
+&nbsp;&nbsp;&nbsp;<select name="qty7" id="cars7">	
+<option value="" ></option>
+<option value="small">SMALL-100rs</option>
+  <option value="medium">MEDIUM-120rs</option>  
+<option value="large">LARGE-150rs</option>
+   </select>&nbsp;
+<select name="toppings7" id="top7">  
+<option value="" ></option>
+<option value="chocolate">chocolate</option>
+ <option value="caramelsauce">Caramel sauce</option>  
+<option value="sprinkles ">Sprinkles </option>
+   </select></div>
+ <center><div class="text"><br>PRICE:&nbsp; <input type="text" value="" id="price7" size="1px" readonly>&nbsp;&nbsp;
+ QTY:<input type="number"  id="qty7" min=1 max=7 ></div><BR>	
+<button onclick="cart7()">ADD TO CART</button><br>
+<button onclick="can7()">CANCEL</button>
+ <h4 id="error7"></h4></center>
+	</div>
+
+
+
+
+<div class="image">
+<img src="cot.avif" alt="">	
+<form > 
+ <input type='text'  name='p8' id='p8' value="" size='1px' readonly>
+</form>
+<p id="item8">COTTON CANDY </p>
+<div class="text">
+<p id="item">SIZE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOPPINGS</p>
+<p id="item">Extra  Price For TOPPINGS(10)</p>	
+&nbsp;&nbsp;&nbsp;<select name="qty8" id="cars8">	
+<option value="" ></option>
+<option value="small">SMALL-100rs</option>
+  <option value="medium">MEDIUM-120rs</option>  
+<option value="large">LARGE-150rs</option>
+   </select>&nbsp;  
+<select name="toppings8" id="top8">   
+<option value="" ></option>  
+<option value="chocolate">chocolate</option> 
+ <option value="waffer">waffer</option> 
+<option value="sprinkles ">Sprinkles </option>
+   </select></div>
+  <center><div class="text"><br>PRICE:&nbsp; <input type="text" value="" id="price8" size="1px" readonly>&nbsp;&nbsp;
+ QTY:<input type="number"  id="qty8" min=1 max=7 ></div><BR>	
+<button onclick="cart8()">ADD TO CART</button><br>
+<button onclick="can8()">CANCEL</button>
+  <h4 id="error8"></h4></center>
+	</div>
+
+<div class="image">
+<img src="mat.avif">
+<form > 
+ <input type='text'  name='p9' id='p9' value="" size='1px' readonly>
+</form>
+<p id="item9">MATCHA</p>
+<div class="text">
+<p id="item">SIZE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOPPINGS</p>
+<p id="item">Extra  Price For TOPPINGS(10)</p>	
+&nbsp;&nbsp;&nbsp;<select name="qty9" id="cars9">	
+<option value="" ></option>
+<option value="small">SMALL-100rs</option>
+  <option value="medium">MEDIUM-120rs</option>  
+<option value="large">LARGE-150rs</option>
+   </select>&nbsp;   
+<select name="toppings9" id="top9">   
+<option value="" ></option> 
+<option value="nuts chrush">nuts chrush</option> 
+ <option value="choco chip">choco chip</option> 
+<option value="sprinkles ">Sprinkles </option>
+   </select></div>
+  <center><div class="text"><br>PRICE:&nbsp; <input type="text" value="" id="price9" size="1px" readonly>&nbsp;&nbsp;
+ QTY:<input type="number"  id="qty9" min=1 max=7 ></div><BR>	
+<button onclick="cart9()">ADD TO CART</button><br>
+<button onclick="can9()">CANCEL</button>
+  <h4 id="error9"></h4></center>
+	</div>
+    
+    
+        <img src="bliss1.png" width="20%" height="20%" alt="">
+    
+<div class="image">
+	<img src="spe.avif" alt="">	
+<form > 
+ <input type='text'  name='p10' id='p10' value="" size='1px' readonly>
+</form>
+<p id="item10">FROSTY BLISS SIGNATURE </p>
+	<div class="text">
+<p id="item">SIZE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOPPINGS</p>
+<p id="item">Extra  Price For TOPPINGS(30)</p>	
+&nbsp;&nbsp;&nbsp;<select name="qty10" id="cars10">	
+<option value="" ></option>
+<option value="small">SMALL-200rs</option>
+  <option value="medium">MEDIUM-250rs</option>  
+<option value="large">LARGE-300rs</option>
+   </select>&nbsp;   
+<select name="toppings10" id="top10">
+<option value="" ></option> 
+<option value="secret sycrup">secret sycrup</option>
+ <option value="caramelsauce">Caramel sauce</option>
+<option value="sprinkles ">Sprinkles </option>
+   </select><br><br>
+</div>
+  <center>
+<div class="text"><br>PRICE:&nbsp; <input type="text" value="" id="price10" size="1px" readonly>&nbsp;&nbsp;
+ QTY:<input type="number"  id="qty10" min=1 max=7 ></div><BR>	
+ <button onclick="cart10()">ADD TO CART</button><br>
+<button onclick="can10()">CANCEL</button>
+  <h4 id="error10"></h4></center>
+</div>
+   
+        <img src="bliss1.png" width="20%" height="20%" alt="alt">
+    
+</div>
+
+
+<center><div class="cart">	
+<div class="box">ADD TO CART</div>	
+<p id="amount1"></p>	
+<p id="amount2"></p>	
+<p id="amount3"></p>
+<p id="amount4"></p><p id="amount5"></p><p id="amount6"></p>
+<p id="amount7"></p><p id="amount8"></p><p id="amount9"></p>
+<p id="amount10"></p><br><br>	
+<button onclick="buy()">BUY</button>&nbsp;&nbsp;
+<br></div>
+    <div class="cart">
+        <form action='ord1_ser' method="get" onsubmit="return field()" >
+            <div class="box">PLACE ORDER</div>	<br>
+   NAME:- <input type="text" id="user" name="user" onchange="validate()" pattern="[A-Za-z]{5,10}" ><br>
+   PHONE- <input type="text" id="phone" name="phone" pattern="[0-9]{10}" onchange="validatephone()"><br>
+   <br>No of item:<input type="text" name="count" id="count" readonly><br>
+   <br>TOTAL:-<input type="text" class="button" name="amount" id="amount" readonly><br><br>
+   <input type="submit"  value="pay" class="button">
+   <br><p id="show"></p></form></div>
+</center>
+<script>
+function field(){
+    var name=document.getElementById('user').value;
+    var phone=document.getElementById('phone').value;       
+    var count=document.getElementById('count').value;
+    var amount=document.getElementById('amount').value;   
+    if(name==="" ||  phone==="" || count===""||amount===""){
+        document.getElementById('show').innerHTML="* FILL OUT THE FIELD";
+                show.style="color:white";
+              return false;
+    }
+   
+    else{
+        if(count<=0|| amount<=0){
+        document.getElementById('show').innerHTML="*kindly purchase";              
+              return false;}
+          else{
+              document.getElementById('show').innerHTML="";              
+              return true;
+          }
+          return true;
+    }
+  
+return true;
+}
+function validate(){
+            var name=document.getElementById('user');
+            if(!name.validity.valid)
+            {
+                document.getElementById('show').innerHTML="* username must be alphabet with 5-10 character";
+                show.style="color:white";
+              return false;
+            }
+            else{
+                document.getElementById('show').innerHTML="";
+                return true;
+            }
+            return true;
+        
+        }
+  
+  function validatephone(){
+            var phone=document.getElementById('phone');
+            if(!phone.validity.valid)
+            {
+                document.getElementById('show').innerHTML="* phone number must be 10 digit";
+                show.style="color:white";
+              return false;
+            }
+            else{
+                document.getElementById('show').innerHTML="";
+                return true;
+            }
+            return true;
+        
+        }
+
+
+
+function buy()
+{	
+var p1=document.getElementById('price1').value;	
+var p2=document.getElementById('price2').value;	
+var p3=document.getElementById('price3').value;	
+var p4=document.getElementById('price4').value;	
+var p5=document.getElementById('price5').value;	
+var p6=document.getElementById('price6').value;
+var p7=document.getElementById('price7').value;	
+var p8=document.getElementById('price8').value;	
+var p9=document.getElementById('price9').value;
+var p10=document.getElementById('price10').value;
+
+var a1=document.getElementById('qty1').value;	
+var a2=document.getElementById('qty2').value;	
+var a3=document.getElementById('qty3').value;	
+var a4=document.getElementById('qty4').value;	
+var a5=document.getElementById('qty5').value;	
+var a6=document.getElementById('qty6').value;	
+var a7=document.getElementById('qty7').value;	
+var a8=document.getElementById('qty8').value;	
+var a9=document.getElementById('qty9').value;	
+var a10=document.getElementById('qty10').value;	
+var total=0;
+var count=0;
+	
+if(a1!=="")
+{	
+    count++;
+total+=parseInt(p1);	
+}
+	
+if(a2!=="")
+{
+    count++;
+total+=parseInt(p2);	
+}
+	
+if(a3!=="")
+{	
+    count++;
+total+= parseInt(p3);	
+}
+if(a4!=="")
+	{
+	count++;
+total+= parseInt(p4);
+	
+}
+	
+if(a5!=="")
+{	
+    count++;
+total+= parseInt(p5);	
+}
+	
+if(a6!=="")
+{	 
+    count++;
+total+= parseInt(p6);	
+}
+	
+if(a7!=="")
+{	 
+    count++;
+total+= parseInt(p7);	
+}
+
+if(a8!=="")
+{
+        count++;
+
+total+= parseInt(p8);	
+}
+
+if(a9!=="")
+{	 count++; 
+total+= parseInt(p9);	
+}
+if(a10!=="")
+{	 count++; 
+total+= parseInt(p10);	
+}
+
+document.getElementById('amount').value=total;
+document.getElementById('count').value=count;
+}
+function can1(){
+    
+    document.getElementById('amount1').innerHTML="";
+    document.getElementById('price1').value="";
+    document.getElementById('qty1').value="";
+    document.getElementById('cars1').value="";
+    document.getElementById('top1').value="";
+    document.getElementById('price1').value="";
+   
+}
+function can2(){
+    
+    document.getElementById('amount2').innerHTML="";
+    document.getElementById('price2').value="";
+    document.getElementById('qty2').value="";
+    document.getElementById('cars2').value="";
+    document.getElementById('top2').value="";
+    document.getElementById('price2').value="";
+    
+}
+function can3(){
+    
+    document.getElementById('amount3').innerHTML="";
+    document.getElementById('price3').value="";
+    document.getElementById('qty3').value="";
+    document.getElementById('cars3').value="";
+    document.getElementById('top3').value="";
+    document.getElementById('price3').value="";
+    }
+    
+
+
+function can4(){
+    
+    document.getElementById('amount4').innerHTML="";
+    document.getElementById('price4').value="";
+    document.getElementById('qty4').value="";
+    document.getElementById('cars4').value="";
+    document.getElementById('top4').value="";
+    document.getElementById('price4').value="";
+    
+    
+}
+function can5(){
+     
+    document.getElementById('amount5').innerHTML="";
+    document.getElementById('price5').value="";
+    document.getElementById('qty5').value="";
+    document.getElementById('cars5').value="";
+    document.getElementById('top5').value="";
+    document.getElementById('price5').value="";
+   
+}
+function can6(){
+    
+    document.getElementById('amount6').innerHTML="";
+    document.getElementById('price6').value="";
+    document.getElementById('qty6').value="";
+    document.getElementById('cars6').value="";
+    document.getElementById('top6').value="";
+    document.getElementById('price6').value="";
+    }
+    
+function can7(){
+        
+    document.getElementById('amount7').innerHTML="";
+    document.getElementById('price7').value="";
+    document.getElementById('qty7').value="";
+    document.getElementById('cars7').value="";
+    document.getElementById('top7').value="";
+    document.getElementById('price7').value="";
+    }
+    
+function can8(){
+    
+    document.getElementById('amount8').innerHTML="";
+    document.getElementById('price8').value="";
+    document.getElementById('qty8').value="";
+    document.getElementById('cars8').value="";
+    document.getElementById('top8').value="";
+    document.getElementById('price8').value="";
+    }
+    
+function can9(){
+   
+    document.getElementById('amount9').innerHTML="";
+    document.getElementById('price9').value="";
+    document.getElementById('qty9').value="";
+    document.getElementById('cars9').value="";
+    document.getElementById('top9').value="";
+    document.getElementById('price9').value="";
+    }
+    
+function can10(){
+    
+    document.getElementById('amount10').innerHTML="";
+    document.getElementById('price10').value="";
+    document.getElementById('qty10').value="";
+    document.getElementById('cars10').value="";
+    document.getElementById('top10').value="";
+    document.getElementById('price10').value="";
+}
+function cart1()
+{
+var pro=document.getElementById('item1');
+var i = pro.textContent;
+var a1=document.getElementById('qty1').value;
+var size=document.getElementById('cars1').value;
+var top=document.getElementById('top1').value;
+var t;
+var to;
+if(a1>0 && a1<8){
+if(size!==""){
+if(size==="small")
+{		
+if(top!=="")
+ {
+ t=100+10;  to=t*a1; document.getElementById('price1').value=to;
+}		
+else{t=100; to=t*a1;  document.getElementById('price1').value=to;
+ }
+}
+
+else if(size==="medium"){
+     
+               if(top!=="")
+{
+t=120+10; to=t*a1;
+ document.getElementById('price1').value=to;
+}
+
+              else{
+t=120;  to=t*a1; document.getElementById('price1').value=to;
+   }
+
+} 
+
+else{ 
+     if(top!=="")
+{t=150+10;  to=t*a1; document.getElementById('price1').value=to;
+}
+      else{ t=150;  to=t*a1; document.getElementById('price1').value=to; }     
+  }
+
+
+    if(to!=="")
+   {
+  document.getElementById('amount1').innerHTML=(i+"---"+size+"---"+top+"----"+t+"---"+to);
+    }
+   else{
+    alert("kindly give the qty");
+}
+ document.getElementById('error1').innerHTML="";
+error1.style="color:white";
+}
+else{
+         document.getElementById('error1').innerHTML="*KINDLY SELECT SIZE";
+              error1.style="color:white";
+}
+}
+else {
+        document.getElementById('error1').innerHTML="*KINDLY GIVE QTY";
+               error1.style="color:white";
+}
+document.getElementById('p1').value=p1;
+}
+
+
+
+
+function cart2(){
+var pro=document.getElementById('item2');
+var i = pro.textContent;
+var a1=document.getElementById('qty2').value;
+var size=document.getElementById('cars2').value;
+var top=document.getElementById('top2').value;
+var t;var to;
+if(a1>0 && a1<8){
+if(size!=="")
+{
+if(size==="small")
+{
+if(top!=="")
+{
+ t=100+10;  to=t*a1;document.getElementById('price2').value=to;
+ }
+else{ 
+t=100;  to=t*a1;document.getElementById('price2').value=to;
+  }
+}
+
+else if(size==="medium"){
+if(top!=="")
+	{
+ t=120+10;  to=t*a1;document.getElementById('price2').value=to;}
+else{
+t=120;  to=t*a1;document.getElementById('price2').value=to;
+ }
+}
+else{
+if(top!=="")
+{
+ t=150+10;  to=t*a1;document.getElementById('price2').value=to;
+}
+else{
+t=150;  to=t*a1;document.getElementById('price2').value=to;
+ }
+}
+
+if(to!==""){
+document.getElementById('amount2').innerHTML=(i+"---"+size+"---"+top+"----"+t+"---"+to);
+
+}
+
+else{  
+ alert("kindly give the qty");
+}
+ document.getElementById('error2').innerHTML="";
+error2.style="color:white";
+}
+else{
+         document.getElementById('error2').innerHTML="*KINDLY SELECT SIZE";
+              error2.style="color:white";
+}
+}
+else {
+        document.getElementById('error2').innerHTML="*KINDLY GIVE QTY";
+               error2.style="color:white";
+}
+document.getElementById('p2').value=p2;
+}
+
+
+
+
+function cart3(){
+var pro=document.getElementById('item3');
+var i = pro.textContent;
+var a1=document.getElementById('qty3').value;
+var size=document.getElementById('cars3').value;
+var top=document.getElementById('top3').value;
+var t;var to;
+if(a1>0 && a1<8){
+if(size!=="")
+{
+
+if(size==="small")
+{
+if(top!==""){
+ t=100+10;  to=t*a1;document.getElementById('price3').value=to;}
+
+else{t=100; to=t*a1; document.getElementById('price3').value=to; }
+
+}
+
+else if(size==="medium"){
+ if(top!=="")
+{
+ t=120+10; to=t*a1; document.getElementById('price3').value=to;
+}
+else{
+t=120;  to=t*a1;document.getElementById('price3').value=to;
+}
+}
+
+else{
+ if(top!=="")
+{
+ t=150+10;  to=t*a1;document.getElementById('price3').value=to;
+}
+
+else{
+t=150; to=t*a1; document.getElementById('price3').value=to;
+  }
+
+}
+
+if(to!==""){
+document.getElementById('amount3').innerHTML=(i+"---"+size+"---"+top+"----"+t+"---"+to);
+}
+
+else{
+  alert("kindly give the qty");
+}
+ document.getElementById('error3').innerHTML="";
+error3.style="color:white";
+}
+else{
+         document.getElementById('error3').innerHTML="*KINDLY SELECT SIZE";
+              error3.style="color:white";
+}
+}
+else {
+        document.getElementById('error3').innerHTML="*KINDLY GIVE QTY";
+               error3.style="color:white";
+}
+document.getElementById('p3').value=p3;
+}
+
+
+
+
+
+
+function cart4(){
+var pro=document.getElementById('item4');
+var i = pro.textContent;
+var a1=document.getElementById('qty4').value;
+var size=document.getElementById('cars4').value;
+var top=document.getElementById('top4').value;
+var t;var to;
+if(a1>0 && a1<8){
+if(size!==""){
+
+if(size==="small")
+{
+
+if(top!=="")
+	{
+ t=100+10;  to=t*a1; document.getElementById('price4').value=to;
+}
+
+else{
+t=100;  to=t*a1; document.getElementById('price4').value=to;
+}}
+
+else if(size==="medium"){
+ if(top!==""){
+ t=120+10;  to=t*a1; document.getElementById('price4').value=to;
+}
+
+else{
+t=120;  to=t*a1; document.getElementById('price4').value=to;
+   }
+}
+else{
+ if(top!=="")
+{ t=150+10;  to=t*a1; document.getElementById('price4').value=to;
+}
+
+else{
+t=150;  to=t*a1; document.getElementById('price4').value=to;
+ }
+}
+
+if(to!==""){
+document.getElementById('amount4').innerHTML=(i+"---"+size+"---"+top+"----"+t+"---"+to);
+}
+else{
+ alert("kindly give the qty");
+}
+ document.getElementById('error4').innerHTML="";
+error4.style="color:white";
+}
+else{
+         document.getElementById('error4').innerHTML="*KINDLY SELECT SIZE";
+              error4.style="color:white";
+}
+}
+else {
+        document.getElementById('error4').innerHTML="*KINDLY GIVE QTY";
+               error4.style="color:white";
+}
+document.getElementById('p4').value=p4;
+}
+
+
+
+
+
+function cart5(){
+var pro=document.getElementById('item5');
+var i = pro.textContent;
+var a1=document.getElementById('qty5').value;
+var size=document.getElementById('cars5').value;
+var top=document.getElementById('top5').value;
+var t;var to;
+if(a1>0 && a1<8){
+if(size!==""){
+if(size==="small")
+{
+if(top!==""){
+ t=100+10;  to=t*a1;document.getElementById('price5').value=to;
+}
+
+else{
+t=100;  to=t*a1;document.getElementById('price5').value=to;
+   }
+}
+else if(size==="medium"){
+ if(top!=="")
+{
+ t=120+10;  to=t*a1;document.getElementById('price5').value=to;}
+else{
+t=120;  to=t*a1;document.getElementById('price5').value=to;}
+}
+else{
+ if(top!=="")
+{
+ t=150+10;  to=t*a1;document.getElementById('price5').value=to;}
+else{
+t=150;  to=t*a1;document.getElementById('price5').value=to;
+  }
+}
+
+if(t!==""){
+document.getElementById('amount5').innerHTML=(i+"---"+size+"---"+top+"----"+t+"---"+to);
+}
+else{
+ alert("kindly give the qty");
+}
+ document.getElementById('error5').innerHTML="";
+error5.style="color:white";
+}
+else{
+         document.getElementById('error5').innerHTML="*KINDLY SELECT SIZE";
+              error5.style="color:white";
+}
+}
+else {
+        document.getElementById('error5').innerHTML="*KINDLY GIVE QTY";
+               error5.style="color:white";
+}
+document.getElementById('p5').value=p5;
+}
+
+
+
+function cart6(){
+
+var pro=document.getElementById('item6');
+var i = pro.textContent;
+var a1=document.getElementById('qty6').value;
+var size=document.getElementById('cars6').value;
+var top=document.getElementById('top6').value;
+var t;var to;
+if(a1>0 &&a1<8){
+if(size!==""){
+
+if(size==="small")
+{
+
+            if(top!=="") {
+ t=100+10;  to=t*a1; document.getElementById('price6').value=to;}
+
+       else{
+t=100;  to=t*a1; document.getElementById('price6').value=to;
+  }
+
+}
+
+else if(size==="medium"){
+ if(top!=="")
+
+{
+
+ t=120+10; to=t*a1; document.getElementById('price6').value=to;
+
+}
+else{
+t=120;  to=t*a1; document.getElementById('price6').value=to;
+
+ }
+
+}
+
+else{
+ if(top!=="")
+
+{
+
+ t=150+10;to=t*a1; document.getElementById('price6').value=to;
+
+}
+
+else{
+
+t=150; to=t*a1;document.getElementById('price6').value=to;
+   }
+}
+
+if(t!==""){
+	document.getElementById('amount6').innerHTML=(i+"---"+size+"---"+top+"----"+t+"---"+to);
+
+}
+
+else{
+ alert("kindly give the qty");
+}
+ document.getElementById('error6').innerHTML="";
+error6.style="color:white";
+}
+else{
+         document.getElementById('error6').innerHTML="*KINDLY SELECT SIZE";
+              error6.style="color:white";
+}
+}
+else {
+        document.getElementById('error6').innerHTML="*KINDLY GIVE QTY";
+               error6.style="color:white";
+}
+document.getElementById('p6').value=p6;
+}
+
+
+
+
+
+
+function cart7(){
+
+var pro=document.getElementById('item7');
+var i = pro.textContent;
+var a1=document.getElementById('qty7').value;
+var size=document.getElementById('cars7').value;
+var top=document.getElementById('top7').value;
+var t;var to;
+if(a1>0 && a1<8){
+if(size!==""){
+
+if(size==="small")
+{
+            if(top!=="") {
+ t=100+10;  to=t*a1;document.getElementById('price7').value=to;}
+
+       else{
+t=100;  to=t*a1;document.getElementById('price7').value=to;
+  }
+}
+
+else if(size==="medium"){
+ if(top!=="")
+
+{
+ t=120+10;  to=t*a1;document.getElementById('price7').value=to;
+}
+else{
+t=120;  to=t*a1;document.getElementById('price7').value=to;
+ }
+}
+
+else{
+ if(top!=="")
+
+{
+ t=150+10;  to=t*a1;document.getElementById('price7').value=to;
+}
+
+else{
+t=150;  to=t*a1;document.getElementById('price7').value=to;
+   }
+}
+
+if(to!==""){
+	document.getElementById('amount7').innerHTML=(i+"---"+size+"---"+top+"----"+t+"---"+to);
+}
+
+else{
+ alert("kindly give the qty");
+}
+ document.getElementById('error7').innerHTML="";
+error7.style="color:white";
+}
+else{
+         document.getElementById('error7').innerHTML="*KINDLY SELECT SIZE";
+              error7.style="color:white";
+}
+}
+else {
+        document.getElementById('error7').innerHTML="*KINDLY GIVE QTY";
+               error7.style="color:white";
+}
+document.getElementById('p7').value=p7;
+}
+
+
+
+
+
+function cart8(){
+var pro=document.getElementById('item8');
+var i = pro.textContent;
+var a1=document.getElementById('qty8').value;
+var size=document.getElementById('cars8').value;
+var top=document.getElementById('top8').value;
+var t;var to;
+if(a1>0&&a1<8){
+if(size!==""){
+if(size==="small")
+{
+ if(top!=="") {
+ t=100+10;  to=t*a1; document.getElementById('price8').value=to;}
+       else{
+t=100;  to=t*a1; document.getElementById('price8').value=to;
+  }
+}
+else if(size==="medium"){
+ if(top!=="")
+{
+ t=120+10;  to=t*a1; document.getElementById('price8').value=to;
+}
+else{
+t=120;  to=t*a1; document.getElementById('price8').value=to;
+
+ }
+
+}
+else{
+ if(top!=="")
+{
+ t=150+10;  to=t*a1; document.getElementById('price8').value=to;
+}
+else{
+t=150;  to=t*a1; document.getElementById('price8').value=to;
+  }
+}
+if(to!==""){
+document.getElementById('amount8').innerHTML=(i+"---"+size+"---"+top+"----"+t+"---"+to);
+}
+else{
+ alert("kindly give the qty");
+}
+ document.getElementById('error8').innerHTML="";
+error8.style="color:white";
+}
+else{
+         document.getElementById('error8').innerHTML="*KINDLY SELECT SIZE";
+              error8.style="color:white";
+}
+}
+else {
+        document.getElementById('error8').innerHTML="*KINDLY GIVE QTY";
+               error8.style="color:white";
+}
+document.getElementById('p8').value=p8;
+}
+
+
+
+
+
+
+function cart9(){
+var pro=document.getElementById('item9');
+var i = pro.textContent;
+var a1=document.getElementById('qty9').value;
+var size=document.getElementById('cars9').value;
+var top=document.getElementById('top9').value;
+var t;var to;
+if(a1>0&&a1<8){
+if(size!==""){
+if(size==="small")
+{
+ if(top!=="") {
+ t=100+10;  to=t*a1; document.getElementById('price9').value=to;
+ }
+ else{
+t=100;  to=t*a1; document.getElementById('price9').value=to;
+  }
+}
+
+else if(size==="medium"){
+ if(top!=="")
+{
+ t=120+10;  to=t*a1; document.getElementById('price9').value=to;
+}
+else{
+t=120;  to=t*a1; document.getElementById('price9').value=to;
+ }
+}
+
+else{
+ if(top!=="")
+{
+ t=150+10;  to=t*a1; document.getElementById('price9').value=to;
+}
+
+else{
+t=150; to=t*a1; document.getElementById('price9').value=to;
+   }
+}
+if(to!==""){
+	document.getElementById('amount9').innerHTML=(i+"---"+size+"---"+top+"----"+t+"---"+to);
+}
+else{
+ alert("kindly give the qty");
+}
+ document.getElementById('error9').innerHTML="";
+error9.style="color:white";
+}
+else{
+         document.getElementById('error9').innerHTML="*KINDLY SELECT SIZE";
+              error9.style="color:white";
+}
+}
+else {
+        document.getElementById('error9').innerHTML="*KINDLY GIVE QTY";
+               error9.style="color:white";
+}
+document.getElementById('p9').value=p9;
+}
+
+
+function cart10(){
+var pro=document.getElementById('item10');
+var i = pro.textContent;
+var a1=document.getElementById('qty10').value;
+var size=document.getElementById('cars10').value;
+var top=document.getElementById('top10').value;
+var t;
+var to;
+var size_price;
+var top_price;
+if(a1>0 && a1<8){
+if(size!==""){
+if(size==="small")
+{
+ if(top!=="") {
+    
+ t=200+30;  to=t*a1; document.getElementById('price10').value=to;}
+ else{ 
+t=200;  to=t*a1; document.getElementById('price10').value=to;
+  }
+}
+
+else if(size==="medium"){
+ if(top!=="")
+{ 
+ t=250+30;  to=t*a1; document.getElementById('price10').value=to;
+}
+else{ 
+t=250;  to=t*a1; document.getElementById('price10').value=to;
+ }
+}
+
+else{ 
+ if(top!=="")
+{ 
+ t=300+30; 
+  to=t*a1;
+  document.getElementById('price10').value=to;
+}
+
+else{ 
+t=300;  to=t*a1; 
+document.getElementById('price10').value=to;
+   }
+}
+if(to!==""){
+	document.getElementById('amount10').innerHTML=(i+"---"+size+"---"+top+"----"+t+"---"+to);
+}
+else{
+ alert("kindly give the qty");
+}
+ document.getElementById('error10').innerHTML="";
+error10.style="color:white";
+}
+else{
+         document.getElementById('error10').innerHTML="*KINDLY SELECT SIZE";
+              error10.style="color:white";
+}
+}
+else {
+        document.getElementById('error10').innerHTML="*KINDLY GIVE QTY";
+               error10.style="color:white";
+}
+document.getElementById('p10').value=p10;
+}
+
+
+</script>
+
+</body>
+
+</html>

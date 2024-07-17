@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PAY</title>
+<meta name="viewport"  content="width=device-width,initial-scale=1.0">
+<style>
+body{
+background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(ice4.jpg);
+background-size:cover;
+width:100%;
+height:100%;
+color:white;
+}h1{
+border:3px;
+background-color:transparent;
+font-size:30px;
+margin-top:100px;
+color:lightcoral;
+width:50%;
+}
+.box select{
+width:100%;
+height:100%;
+border:3px solid white;
+background-color:white;
+margin-bottom:30px;
+}
+input{
+background:white; 
+font-size:20px;
+margin-top:5px;
+border-radius:30px;
+padding:20px;
+color:black;
+padding:10px;
+margin-left:3px;
+border:4px solid black;
+}
+p{
+    font-size: 30px;
+}
+.pay{
+width:150px;
+height:180px;
+padding:10px;
+display:inline-block;
+color:black;
+border-radius:10px;
+cursor:pointer;
+margin:10px 15px;
+background-position:center;
+background-size:cover;
+transition:transform 0.5s;
+}
+.pay:hover{
+transform:translateY(-15px);
+}
+h5{
+font-size:30px;
+float:left;
+color:black;
+margin-top:2px;
+}
+
+.pay1{
+background-image:url(paytm.jpg);
+}
+.pay2{
+background-image:url(gpay.jpg);
+}
+.pay3{
+background-image:url(phonepe.jpg);
+}
+.pay4{
+background-image:url(neft.png);
+}
+@media screen and(max-width:768px){
+h1{
+font-size:20px;
+}}
+
+</style>
+</head>
+<div class="box"><center>
+    <h1>CHOOSE THE GATEWAY TO MAKE PAYMENT</h1></center>
+    <p style="margin-left: 270px;">
+         NAME:-<input type="text" id="name"><br>
+        PHONE:-<input type="text" id="pay"><br>
+        IFSC:-<input type="text" id="neft"><br><br></p>
+<center>
+<div class="col">
+	<div class="pay pay1">
+	<h5 onclick="pay()">^</h5> 
+	</div>
+	<div class="pay pay2">
+	<h5 onclick="pay()">^</h5>
+	</div>
+	<div class="pay pay3">
+	<h5 onclick="pay()">^</h5>
+	</div>
+	<div class="pay pay4">
+	<h5 onclick="neft()">^</h5>
+	</div>
+</div><p id="show"></p></center></div>
+<script>
+function pay(){
+var ans=document.getElementById('pay').value;
+			if(!/^\d{10}$/.test(ans))
+			{
+			document.getElementById('show').innerHTML="*Invalid";
+		    show.style="color:red;";
+			pay();
+			}
+			else
+			{
+			document.getElementById('show').innerHTML="PAYMENT MADE";
+		    show.style="color:green;";
+			}
+}
+function neft(){
+	var ans=document.getElementById('neft').value;
+			if(!/^\d{8}$/.test(ans))
+			{
+			document.getElementById('show').innerHTML="*Invalid";
+		    show.style="color:red;";
+			neft();
+			}
+			else
+			{
+			alert("THANK YOU DO VISIT OUR SITE FOR MORE IDEAS");
+			
+			}
+			}
+</script>
+</body>
+</html>

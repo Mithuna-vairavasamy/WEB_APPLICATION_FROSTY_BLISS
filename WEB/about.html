@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>about us page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+
+	background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(icea.jpg);
+	background-size:cover;
+	overflow:hidden;
+}
+nav{
+	width:130%;
+	display:flex;
+	align-items:center;
+	margin:20px auto;
+        word-spacing: 10px;
+}
+ul{
+display:flex;
+position:absolute;
+right:20px;
+top:20px;
+
+}
+
+
+ul li{
+list-style:none;
+margin-left:62px;
+margin-top:27px;
+}
+
+ul li a{
+font-size:2vw;
+text-decoration:none;
+color:snow;
+text-shadow:2px 2px black;
+}
+
+ul li.active a{
+	background-color:white;
+	color:brown;
+        padding:6px;
+        border-radius: 6px;
+        text-shadow:none;
+        font-weight:bold;
+}
+
+ul li a:hover
+{
+font-weight:bold;
+color:brown;
+padding:5px;
+text-shadow:none;
+background-color:white;
+border-top-left-radius: 6px;
+border-bottom-left-radius: 6px;
+border-top-right-radius:6px;
+border-bottom-right-radius:6px;
+}
+
+.logo img{
+	float:left;
+	width:150px;
+	height:auto;
+	margin-right:180px;
+}
+.heading{
+	text-align:center;
+	padding:20px 30px;
+	margin:150px;
+	color:lightgoldenrodyellow;
+	text-transform:uppercase;
+	font-size:70px;
+}
+.heading span{
+	color:lightcoral;
+	text-transform:uppercase;
+}
+.container{
+	display:flex;
+	justify-content:center;
+	width:80%;
+	margin:25px auto;
+        position:absolute;
+        top:200px;
+        left:200px;
+}
+
+.hero-content{
+	flex:1;
+        margin-top:0px;
+}
+.hero-content h2{
+	font-size:25px;
+	color:black;
+        background-color: mistyrose;
+	text-transform:uppercase;
+        margin-top:4px;
+        padding:10px ;
+        justify-content:center;
+        border:2px;
+        width:100%;
+        height:40px;
+        box-shadow: 10px white;
+}
+.hero-content p{
+        padding:10px 6px ;
+	font-size:17px;
+	color:white;
+        background-color: lightcoral;
+        word-spacing: 2px;
+        letter-spacing:2px;
+        
+}
+.hero-content button{
+	display:inline-block;
+	background-color:darkmagenta;
+	color:#fff;
+	padding:5px 10px;
+	border-radius:5px;
+	font-size:20px;
+	border:none;
+	cursor:pointer;
+}
+.hero-content button:hover{
+	background-color:red;
+	transform:scale(1.1);
+}
+.hero-image{
+	flex:2;
+        gap:30px;
+      	width:170px;
+        margin-top:0px;
+}
+.hero-image img{
+	width:50%;
+	height:50%;
+        margin-left:300px;
+	border-radius:10px;
+        margin-bottom:10px;
+        
+}
+</style>
+</head>
+<body>
+	<div class="logo"><img src="bliss1.png"></div>
+	<div>
+	<ul>	
+		<li><a href="home.html">HOME</a></li>
+		<li class="active"><a href="about.html">ABOUT</a></li>
+		<li><a href="eg">MAKE ORDER</a></li>
+		<li ><a href="contact.html">CONTACT</a></li>
+		<li><a href="index.html">LOGOUT</a></li>
+        </ul></div>
+   
+    <div class="container"><center>
+	<div class="hero-content">
+            <h2>take a spoon to on your beast mode</h2><br>
+            <p>FROSTY BLISS,ARE YOU EAGER TO KNOW OUR HISTORY.We start this frosty bliss as a small truck shop,
+            on year 1996 with four people of one family,Now 2024 This has developed to great extend because of secret and also 
+            because of our worker,now frosty bliss has become franchaise all over a world with a MOTTO OF "TAKE A SPOON TO ON YOUR BEAST MODE"
+            We also started our spoons to available at online our you.Throught this website you can make a spoon of your choice
+            with various toppings.ENJOY THE SPOON WITH FROSTY BLISS</p>
+       <button class="button">Read more</button>
+        </div>
+    
+        </center>
+</div>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<html>
+<head>
+<title>Register page</title>                   
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+
+body
+{
+background:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),url(reg.webp);
+background-size:cover;
+width:100%;
+height:100%;
+}
+
+
+
+
+.register{
+
+position:absolute;
+top:25%;
+left:37%;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:transparent;
+border:7px ridge white;
+border-radius:5px;
+padding:30px; 
+color:white;
+align-items:center;
+
+}
+
+
+
+h1{
+
+text-align:center;
+color:plum;
+font-size:30px;
+font-weight:bold;
+}
+
+h2{
+
+text-align:center;
+color:plum;
+font-size:30px;
+font-weight:bold;
+margin:98px;
+}
+
+
+.box{
+
+display:flex;
+margin-bottom:15px;
+}
+
+
+
+.box input{
+background:white; 
+font-size:20px;
+margin-top:5px;
+border-radius:30px;
+padding:20px;
+color:black;
+padding:10px;
+border:4px solid black;
+}
+
+.log{
+padding:10px;
+background:white;
+border:none;
+border-radius:40px;
+cursor:pointer;
+font-size:20px;
+color:black;
+font-weight:bold;
+text-transform:capitalize;
+}
+
+
+#img img{
+
+position:absolute;
+left:30px;
+top:100px;
+width:20%;
+height:40%
+}
+
+
+.register-link p a
+{
+font-size:25px;
+margin-top:10px;
+color:plum;
+text-decoration:none;
+font-weight:bold;
+}
+
+.register-link p a:hover
+{
+color:red;
+text-decoration:underline;
+}
+ 
+
+ul{
+display:flex;
+position:absolute;
+right:20px;
+top:20px;
+
+}
+
+
+ul li{
+list-style:none;
+margin-left:62px;
+margin-top:27px;
+}
+
+ul li a{
+font-size:2vw;
+text-decoration:none;
+color:snow;
+text-shadow:2px 2px black;
+}
+
+ul li.active a{
+	background-color:white;
+	color:darkmagenta;
+        padding:6px;
+        border-radius: 6px;
+        text-shadow:none;
+         font-weight:bold;
+}
+
+ul li a:hover
+{
+font-weight:bold;
+color:darkmagenta;
+padding:5px;
+text-shadow:none;
+background-color:white;
+border-top-left-radius: 6px;
+border-bottom-left-radius: 6px;
+border-top-right-radius:6px;
+border-bottom-right-radius:6px;
+}
+
+
+@media(max-width:768px)
+{
+
+#img img{
+left:10px;
+width:30%;
+height:20%;
+}
+
+h1
+{
+font-size:20px;
+}
+.register
+{
+position:absolute;
+top:30%;
+left:20%;
+}
+
+ul
+{
+right:10px;
+}
+
+ul li
+{
+margin-left:20px;
+margin-top:60px;
+}
+
+ul li a{
+font-size:3vw;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+  
+<div>
+<ul>
+<li CLASS='ACTIVE'><a href="avail.html">ADMIN</a></li>	
+</ul>
+</div>
+<div class="register">
+    <form action="reg_ser" method="post" onsubmit="return register()">
+  <div>
+<h1>REGISTER</h1>
+ <div class="box">
+     <input type="text" id="user" name="username" placeholder="Username" onchange="validate()" pattern="[A-Za-z]{5,10}" > 
+ </div>   
+ <div class="box">
+<input type="email" id="email" name="email" onchange="mail()" placeholder="Email" >
+ </div>
+<div class="box">
+<input type="password" id="pwd" name="password" placeholder="Password" >
+ </div>
+<div class="box">
+<input type="password" id="cpwd" name="cpassword" placeholder="Password" >
+ </div>
+ <center>       
+     <p id="show"></p>
+<input type="submit"    class="log" value="Register">
+</center>
+</div>
+</form>
+</div>
+    
+    
+ <script>
+function register(){
+var name=document.getElementById('user').value;
+var uemail=document.getElementById('email').value;
+var pwd=document.getElementById('pwd').value;
+var cpwd=document.getElementById('cpwd').value;
+    if(name==="" || uemail===""|| pwd==="" || cpwd==="")
+	{
+		 document.getElementById('show').innerHTML="Please fill the form!!";
+		show.style="color:white;font-weight:bold;font-size:20px;";
+               
+                return false;
+	}
+	
+	else{
+            if(pwd===cpwd )
+	{
+	   document.getElementById('show').innerHTML="";
+		show.style="color:white;font-weight:bold;font-size:20px;";
+                return true;
+		
+	}
+         if(pwd!==cpwd)
+	{
+		document.getElementById('show').innerHTML="Password did not match!!";
+		show.style="color:white;font-weight:bold;font-size:20px;";
+                
+                return false;
+		
+	}
+
+        }
+        return true;
+        }
+        function validate(){
+            var name=document.getElementById('user');
+            if(!name.validity.valid)
+            {
+                document.getElementById('show').innerHTML="username must be alphabet with 5-10 character";
+                show.style="color:white;font-weight:bold;font-size:20px;";
+              return false;
+            }
+            else{
+                document.getElementById('show').innerHTML="";
+                return true;
+            }
+            return true;
+        
+        }
+        function mail(){
+            var uemail=document.getElementById('email');
+            if(!uemail.validity.valid)
+            {
+                document.getElementById('show').innerHTML="MAIL MUST CONTAION @";
+                show.style="color:white;font-weight:bold;font-size:20px;";
+              return false;
+            }
+            else{
+                document.getElementById('show').innerHTML="";
+                return true;
+            }
+            return true;
+        }
+</script>   
+</body>
+</html>
